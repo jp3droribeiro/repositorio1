@@ -3,47 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu de Navegação</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Agência de Publicidade</title>
 </head>
-
-
 <body>
 
-<header>
-    <div class="logo">
-        <img src="sua-logo.png" alt="Logo">
-    </div>
-    <nav>
-        <ul class="nav-links">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo da Empresa">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link">Início</a></li>
+                <li><a href="#" class="nav-link">Serviços</a></li>
+                <li><a href="#" class="nav-link">Portfólio</a></li>
+                <li><a href="#" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="menu-btn" onclick="toggleMenu()">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="drawer">
+        <ul class="drawer-links">
             <li><a href="#" class="nav-link">Início</a></li>
-            <li><a href="#" class="nav-link">Sobre Nós</a></li>
             <li><a href="#" class="nav-link">Serviços</a></li>
+            <li><a href="#" class="nav-link">Portfólio</a></li>
             <li><a href="#" class="nav-link">Contato</a></li>
         </ul>
-        <div class="menu-btn" onclick="toggleMenu()">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
+    </div>
+
+
+<!-- CONTAINER DO CARROSSEL CONTENDO IMAGENS   -->
+
+    <div class="carousel-container">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="web pic.webp" class="d-block w-100" alt="Imagem 1">
+
+                    <div class = "carousel-caption">
+                        <h3>Alguma coisa</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta labore provident amet aperiam cum pariatur, quo alias perferendis. Dignissimos modi doloremque quaerat quis necessitatibus sint suscipit dolore ratione voluptates illum.</p>
+                        <button class = "btn-warning"> Saiba mais</button>
+                    </div>
+
+
+                </div>
+                <div class="carousel-item">
+                    <img src="people marketing pic.webp" class="d-block w-100" alt="Imagem 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="web pic.webp" class="d-block w-100" alt="Imagem 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
         </div>
-    </nav>
-    
-</header>
+    </div>
 
-<br>
+    <!-- CONTEUDO DA PAGINA    -->
 
-<section class = "img-section" >
-    texto dentro da imagem
-    
-    <img src="web pic.webp" class="img-fluid" alt="">
-</section>
+    <div class="content">
+        <h1>Bem-vindo à Nossa Agência de Publicidade</h1>
+        <p>Somos uma agência criativa especializada em proporcionar soluções de publicidade inovadoras para nossos clientes. Combinamos design e estratégia para criar campanhas impactantes.</p>
 
-<br>
+        <h2>Nossos Serviços</h2>
+        <p>Oferecemos uma ampla gama de serviços, incluindo design gráfico, marketing digital, publicidade em mídias sociais e muito mais. Trabalhamos de perto com nossos clientes para entender suas necessidades e alcançar resultados excepcionais.</p>
 
-section
+        <h2>Portfólio</h2>
+        <p>Confira nosso portfólio para ver alguns dos projetos incríveis que realizamos para nossos clientes. Estamos orgulhosos de nosso trabalho e estamos sempre prontos para enfrentar novos desafios criativos.</p>
 
+        <h2>Entre em Contato</h2>
+        <p>Estamos ansiosos para colaborar com você e transformar suas ideias em realidade. Entre em contato conosco para discutir seus objetivos de publicidade e como podemos ajudar a alcançá-los.</p>
+    </div>
 
-<script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

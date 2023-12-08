@@ -1,6 +1,143 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: rgb(69, 90, 111);
+    background-color: #2a3133;
+    color: white;
 }
 
+header {
+    background-color: #222;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: #555;
+}
+
+
+
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.btn-line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.drawer {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.drawer-links {
+    list-style: none;
+    padding: 10px;
+}
+
+.drawer-links .nav-link {
+    display: block;
+    padding: 8px;
+    text-align: center;
+}
+
+
+/* parte do carrossel imagens)____________________ */
+.carousel-container {
+    max-width: 100%;
+    margin: 0px auto;
+}
+
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.carousel-caption h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/*_______________________________________________*/
+
+
+.content {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/*RESPONSIVIDADE */
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .drawer {
+        display: flex;
+    }
+}
